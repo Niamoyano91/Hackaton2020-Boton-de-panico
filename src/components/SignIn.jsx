@@ -1,10 +1,13 @@
 import React from 'react'
+import '../styles/SignIn.css'
 import { auth, db } from '../firebase'
 import { withRouter } from 'react-router-dom'
+import firebase from 'firebase'
 
 const SignIn = (props) => {
 
     const [name, setName] = React.useState('')
+    const [phone, setPhone] = React.useState('')
     const [email, setEmail] = React.useState('')
     const [pass, setPass] = React.useState('')
     const [error, setError] = React.useState(null)
@@ -59,18 +62,72 @@ const SignIn = (props) => {
         }
     }, [email, pass, name, props])
 
+    const loginWithGoogle = () => {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider).then((result) => {
+            const user = result.user;
+            console.log('user', user);
+        }).catch(function(error) {
+        });
+    }
+    const loginWithFacebook = () => {
+        const provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider).then((result) => {
+        }).catch(function(error) {
+        });
+    }
+
+    // const observer = () => {
+    //     auth.onAuthStateChanged((user) => {
+    //     if (user) {
+    //         console.log('existe usuario activo');
+    //         props.history.push('/home')
+    //         console.log('*******************');
+    //         console.log(user.emailVerified);
+    //         console.log('*******************');
+    //     } else {
+    //     //    User is signed out.
+    //         console.log('no existe usuario activo');
+    //     }
+    //     });
+    // }
+    // observer()
+
     return (
-        <form onSubmit={processData} className="containerLogIn">
-            <h2 className="logIn">Regístrate</h2>
-            <label htmlFor="name" className="name">Nombre y Apellido</label>
-            <input type="text" className="nameInput" onChange = { (e) => setName(e.target.value)} value={name} placeholder="Jane Pérez"></input>
-            <label htmlFor="email" className="email">Correo electrónico</label>
-            <input type="text" className="emailInput" onChange = { (e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
-            <label htmlFor="pasword" className="password">Contraseña</label>
-            <input type="password" className="passwordInput" onChange = { (e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
-            { error && (<div className="error">{error}</div>)}
-            <button type="submit" className="createSignIn">Crear Cuenta</button>
-        </form>
+        <div className="containerSignIn">
+            <form onSubmit={processData} className="containerFormSignIn">
+                <div className="containerTittleSignIn">
+                    <h2 className="SignIn">Regístrate</h2>
+                </div>
+                
+                <div className="containerDataSignIn">
+                    <input type="text" className="nameInput" onChange = { (e) => setName(e.target.value)} value={name} placeholder="Nombre Apellido"></input>
+                    <input type="text" className="phoneInput" onChange = { (e) => setPhone(e.target.value)} value={phone} placeholder="Teléfono móvil"></input>
+                    <input type="text" className="emailInput" onChange = { (e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
+                    <input type="password" className="passwordInput" onChange = { (e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
+                    { error && (<div className="error">{error}</div>)}
+                </div>
+
+                <div className="containertextSignIn">
+                    <p>También puedes registrarte con:</p>
+                </div>
+
+                <div className="containerBtnSocialSignIn">
+                    <button type="submit" className="google" onClick={ () => loginWithGoogle()}>
+                        <img src="" className="google" alt="google" />
+                    </button>
+                    <button type="submit" className="facebook" onClick={ () => loginWithFacebook()}>
+                        <img src="" className="facebook" alt="facebook" />
+                    </button>
+                </div>
+                
+                <div className="containerRegisterSignIn">
+                    <button type="submit" className="createSignIn">Crear Cuenta</button>
+                </div>
+                
+            </form>
+        </div>
+        
     )
 }
 

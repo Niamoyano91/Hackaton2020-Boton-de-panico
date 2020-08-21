@@ -1,0 +1,47 @@
+.containerLogIn{
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: #E4CDEC;
+    width: 100%;
+    height: 100vh;
+}
+    .containerFormLogIn{
+        display: flex;
+        flex-flow: column;
+    }
+        .containerTittleLogin{
+            display: flex;
+            justify-content: center;
+
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 37px;
+            text-align: center;
+            color: #742092;
+        }
+        .containerDataLogin{
+            display: flex;
+            flex-flow: column;
+        }
+        .containerBtnSocialLogin{
+            display: flex;
+            flex-flow: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .containerBtnLogin{
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            padding-bottom: 20px;
+        }
+        .containerRegisterLogin{
+            padding-top: 20px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
