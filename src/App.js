@@ -1,22 +1,39 @@
-import React from 'react';
+//<---------Librerias-------->
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route} 
+from "react-router-dom";
+import { auth } from './firebase'
+//<---------CSS-------------->
 import './App.css';
+//<---------Components------->
 import Login from './components/Login'
 import SignIn from './components/SignIn'
 import Home from './components/Home'
 import Nivel from './components/Nivel'
 import PanicButton from './components/PanicButton'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import Welcome from './components/Welcome'
 
 const App = () => {
-  return (
+
+  const [firebaseUser, setFirebaseUser] = React.useState(false)
+
+  React.useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      console.log(user)
+      if(user){
+        setFirebaseUser(user)
+      }else{
+        setFirebaseUser(null)
+      }
+    })
+  }, [])
+
+  return firebaseUser !== false ? (
     <Router>
-      <div className="App">
-        <li>
+        {/* <li>
           <Link to="/">Login</Link>
         </li>
         <li>
@@ -30,18 +47,20 @@ const App = () => {
         </li>
         <li>
           <Link to="/sos">SOS</Link>
-        </li>
+        </li> */}
         <Switch>
-          <Route path="/" exact component={Login} />
+          <Route path="/" exact component={Welcome} />
+          <Route path="/login" exact component={Login} />
           <Route path="/signin" component={SignIn} />
           <Route path="/home" component={Home} />
           <Route path="/nivel" component={Nivel} />
           <Route path="/sos" component={PanicButton} />
         </Switch>
-      </div>
     </Router>
 
-  );
+  ) : (
+    <p>Cargando...</p>
+  )
 }
 
 export default App;
