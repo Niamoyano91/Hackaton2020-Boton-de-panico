@@ -3,8 +3,9 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
-  Route} 
-from "react-router-dom";
+  Route
+}
+  from "react-router-dom";
 import { auth } from './firebase'
 //<---------CSS-------------->
 import './App.css';
@@ -12,9 +13,10 @@ import './App.css';
 import Login from './components/Login'
 import SignIn from './components/SignIn'
 import Home from './components/Home'
-import Nivel from './components/Nivel'
 import PanicButton from './components/PanicButton'
 import Welcome from './components/Welcome'
+import Learning from './components/Learning'
+import Levels from './components/Levels'
 
 const App = () => {
 
@@ -23,9 +25,9 @@ const App = () => {
   React.useEffect(() => {
     auth.onAuthStateChanged(user => {
       console.log(user)
-      if(user){
+      if (user) {
         setFirebaseUser(user)
-      }else{
+      } else {
         setFirebaseUser(null)
       }
     })
@@ -33,7 +35,7 @@ const App = () => {
 
   return firebaseUser !== false ? (
     <Router>
-        {/* <li>
+      {/* <li>
           <Link to="/">Login</Link>
         </li>
         <li>
@@ -48,19 +50,22 @@ const App = () => {
         <li>
           <Link to="/sos">SOS</Link>
         </li> */}
-        <Switch>
-          <Route path="/" exact component={Welcome} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/home" component={Home} />
-          <Route path="/nivel" component={Nivel} />
-          <Route path="/sos" component={PanicButton} />
-        </Switch>
+      <Switch>
+        <Route path="/" exact component={Welcome} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/home" component={Home} />
+        <Route path="/learning" component={Learning} />
+        <Route path="/levels">
+          <Levels />
+        </Route>
+        <Route path="/sos" component={PanicButton} />
+      </Switch>
     </Router>
 
   ) : (
-    <p>Cargando...</p>
-  )
+      <p>Cargando...</p>
+    )
 }
 
 export default App;
