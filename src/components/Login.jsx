@@ -4,6 +4,8 @@ import { auth } from '../firebase';
 import { withRouter } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import firebase from 'firebase'
+import Facebook from '../assets/facebook.png'
+import Google from '../assets/google.png'
 
 const Login = (props) => {
 
@@ -90,27 +92,23 @@ const Login = (props) => {
                     <h2 className="logIn">Iniciar Sesión</h2>
                 </div>
                 <div className="containerDataLogin">
-                    <label htmlFor="email" className="email">Correo electrónico</label>
-                    <input type="text" className="emailInput" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
-                    <label htmlFor="pasword" className="password">Contraseña</label>
-                    <input type="password" className="passwordInput" onChange={(e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
+                    <input type="text" className="emailInput" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Correo electrónico"></input>
+                    <input type="password" className="passwordInput" onChange={(e) => setPass(e.target.value)} value={pass} placeholder="Contraseña"></input>
                     {error && (<div className="error">{error}</div>)}
                 </div>
-                <div className="containerBtnSocialLogin">
-                    <button type="submit" className="google" onClick={() => loginWithGoogle()}>
-                        <img src="" className="google" alt="google" />
-                    </button>
-                    <button type="submit" className="facebook" onClick={() => loginWithFacebook()}>
-                        <img src="" className="facebook" alt="facebook" />
-                    </button>
-                </div>
-
                 <div className="containerBtnLogin">
                     <button type="submit" className="buttonLogIn">
                         Iniciar Sesión
                     </button>
                 </div>
-
+                <div className="containerBtnSocialLogin">
+                    <button type="submit" className="google" onClick={() => loginWithGoogle()}>
+                        <img src={Google} className='logosIngresos' alt="google" />Ingresar con Google
+                    </button>
+                    <button type="submit" className="facebook" onClick={() => loginWithFacebook()}>
+                        <img src={Facebook} className='logosIngresos' alt="facebook" />Ingresar con Facebook
+                    </button>
+                </div>
                 <div className="containerRegisterLogin">
                     <label className="notLogin">
                         ¿No tienes cuenta?

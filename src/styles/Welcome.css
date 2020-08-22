@@ -4,16 +4,52 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    background: #F5E2FC;
+    background: white;
     width: 100%;
     height: 100vh;
 }
-    .containerImgLogoWelcome{
-        background: gray;
-    }
-/*         .logoWelcome{
+.titleName{
+    color: #742092;
+    font-family: 'Dancing Script', cursive;
+    font-size: 96px;
+}
 
-        } */
-    .loginWelcome{
-        padding-top: 50px;
-    }
+ .logoWelcome{
+    margin-top: -25%;
+} 
+.loginWelcome{
+    background: #742092;
+    color: white;
+    height: 68%;
+    width: 273%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    margin-left: -87%;
+}
+.tituloPrincipal{
+    color: #742092;
+     text-align: center;
+     font-family: 'Montserrat';
+    font-size: 26px;
+}
+.parrafoPrincipal{
+    color:#742092;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    margin: -4%;
+}
+.tituloUno{
+    color: #742092;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 22px;
+}
+.containertext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}

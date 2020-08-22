@@ -23,18 +23,18 @@
             text-align: center;
             color: #742092;
         }
-            .nameInput, .phoneInput, 
-            .emailInput, .passwordInput{
-                width: 250px;
-                height: 30px;
+            .nameInput, .phoneInput,.emailInputDos,.passwordInputDos {
+                height: 23%;
                 background: #FFFFFF;
                 border: 1px solid #AE6AC7;
                 border-radius: 4px;
+                margin-top: 8%;
             }
+           
         .containerDataSignIn{
             display: flex;
             flex-flow: column;
-            height: 150px;
+            height: 217px;
         }
         .containerBtnSocialSignIn{
             display: flex;
@@ -54,4 +54,21 @@
             display: flex;
             flex-flow: column;
             align-items: center;
+
         }
+        .createSignIn{
+            background: #742092;
+            color: white;
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 29px;
+            border: none;
+            width: 100%;
+        }
+        .containertextSignIn{
+            color: #742092;
+            font-family: 'Montserrat';
+        }
+
