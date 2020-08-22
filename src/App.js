@@ -18,7 +18,7 @@ import Welcome from './components/Welcome'
 import Learning from './components/Learning'
 import Levels from './components/Levels'
 
-import {UserProvider} from './Context/UserContext'
+import { UserProvider } from './Context/UserContext'
 
 const App = () => {
 
@@ -58,6 +58,7 @@ const App = () => {
         <Route path="/signin" component={SignIn} />
         <Route path="/home" component={Home} />
         <Route path="/learning" component={Learning} />
+        <Route path="/sos" component={PanicButton} />
         <UserProvider>
           <Route path="/levels">
             <Levels />
