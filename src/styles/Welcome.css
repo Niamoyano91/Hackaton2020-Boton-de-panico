@@ -1,0 +1,19 @@
+.containerWelcome{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #F5E2FC;
+    width: 100%;
+    height: 100vh;
+}
+    .containerImgLogoWelcome{
+        background: gray;
+    }
+        .logoWelcome{
+
+        }
+    .loginWelcome{
+        padding-top: 50px;
+    }

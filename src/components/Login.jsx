@@ -67,51 +67,60 @@ const Login = (props) => {
         });
     }
 
-    const observer = () => {
-        auth.onAuthStateChanged((user) => {
-        if (user) {
-            console.log('existe usuario activo');
-            props.history.push('/home')
-            console.log('*******************');
-            console.log(user.emailVerified);
-            console.log('*******************');
-        } else {
-        //    User is signed out.
-            console.log('no existe usuario activo');
-        }
-        });
-    }
-    observer()
+    // const observer = () => {
+    //     auth.onAuthStateChanged((user) => {
+    //     if (user) {
+    //         console.log('existe usuario activo');
+    //         props.history.push('/home')
+    //         console.log('*******************');
+    //         console.log(user.emailVerified);
+    //         console.log('*******************');
+    //     } else {
+    //     //    User is signed out.
+    //         console.log('no existe usuario activo');
+    //     }
+    //     });
+    // }
+    // observer()
 
     return (
-        <div >
-            <form onSubmit={processData} className="containerLogIn">
-                <h2 className="logIn">Iniciar Sesión</h2>
-                <label htmlFor="email" className="email">Correo electrónico</label>
-                <input type="text" className="emailInput" onChange = { (e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
-                <label htmlFor="pasword" className="password">Contraseña</label>
-                <input type="password" className="passwordInput" onChange = { (e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
-                { error && (<div className="error">{error}</div>)}
-                <button type="submit" className="google" onClick={ () => loginWithGoogle()}>
-                    <img src="" className="google" alt="google" />
-                </button>
-                <button type="submit" className="facebook" onClick={ () => loginWithFacebook()}>
-                    <img src="" className="facebook" alt="facebook" />
-                </button>
+        <div className="containerLogIn">
+            <form onSubmit={processData} className="containerFormLogIn">
+                <div className="containerTittleLogin">
+                    <h2 className="logIn">Iniciar Sesión</h2>
+                </div>
+                <div className="containerDataLogin">
+                    <label htmlFor="email" className="email">Correo electrónico</label>
+                    <input type="text" className="emailInput" onChange = { (e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
+                    <label htmlFor="pasword" className="password">Contraseña</label>
+                    <input type="password" className="passwordInput" onChange = { (e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
+                    { error && (<div className="error">{error}</div>)}
+                </div>
+                <div className="containerBtnSocialLogin">
+                    <button type="submit" className="google" onClick={ () => loginWithGoogle()}>
+                        <img src="" className="google" alt="google" />
+                    </button>
+                    <button type="submit" className="facebook" onClick={ () => loginWithFacebook()}>
+                        <img src="" className="facebook" alt="facebook" />
+                    </button>
+                </div>
+                
+                <div className="containerBtnLogin">
+                    <button type="submit" className="buttonLogIn">
+                        Iniciar Sesión
+                    </button>
+                </div>
 
-                <button type="submit" className="buttonLogIn">
-                    Iniciar Sesión
-                </button>
-                <label className="notLogin">
-                    ¿No tienes cuenta?
-                </label>
-                <Link to="/signin" className="registerHere">
-                    Regístrate aquí
-                </Link>
+                <div className="containerRegisterLogin">
+                    <label className="notLogin">
+                        ¿No tienes cuenta?
+                    </label>
+                    <Link to="/signin" className="registerHere">
+                        Regístrate aquí
+                    </Link>
+                </div>
             </form>
-
         </div>
-        
     )
 }
 
