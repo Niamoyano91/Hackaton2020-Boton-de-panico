@@ -1,0 +1,30 @@
+.subtitulo{
+    color:#E34C4C;
+    font-family: 'Montserrat';
+    margin: 3%;
+}
+.parrafoDos{
+    color: #E34C4C;
+    text-align: left;
+    margin: 4%;
+    font-family: 'Montserrat';
+}
+.red-containerDos{
+    background: #FFF4D4;
+    border-radius: 20px;
+    width: 340px;
+    height: 480px;
+    text-align: left;
+}
+.button-sosDos{
+    background: #E34C4C;
+    border: none;
+    height: 44%;
+    border-radius: 78%;
+    width: 64%;
+    color: #FBFBFB;
+    font-size: 48px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin-left: 15%;
+}
