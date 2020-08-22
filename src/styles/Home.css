@@ -1,0 +1,31 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.red-container{
+    background: #FF9B8B;
+    border-radius: 20px;
+    width: 320px;
+    height: 245px;
+}
+.titulo{
+    color: #742092;
+}
+.parrafo{
+    color: #FBFBFB;
+    text-align: center;
+}
+.button-sos{
+    background: #E34C4C;
+    border: none;
+    height: 56%;
+    border-radius: 78%;
+    width: 44%;
+    color: #FBFBFB;
+    font-size: 30px;
+    margin-left: 20%;
+}
+.iconos{
+    color: #742092;
+}
