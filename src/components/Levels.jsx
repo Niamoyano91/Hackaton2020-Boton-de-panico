@@ -4,11 +4,21 @@ import firebase from 'firebase'
 import { UserContext } from '../Context/UserContext.js'
 import Barra from '../assets/barra2.png'
 import ReactPlayer from 'react-player'
+import { Link } from "react-router-dom";
 
 const Levels = () => {
     let { setCheck } = useContext(UserContext)
 
     const [questions, setQuestions] = React.useState([])
+
+    const pruebaCheck = () => {
+        firebase.firestore().collection('Check').add({
+            check: 'true',
+            uid: user.uid,
+        })
+          .then((result) => { console.log('mensaje guardado', result); })
+          .catch(error => console.log(error));
+    };
 
 
     console.log(questions)
@@ -43,7 +53,11 @@ const Levels = () => {
     return (
         <div className="containerLevels">
             <img src={Barra} alt='barra' className='barra' />
-            <h1 className='titulo'>Nivel 1</h1>
+            <div className="containerArrowTittle">
+                <img className="arrow" src="https://i.ibb.co/Z1jNqRn/Flecha1.png" alt="Flecha" />
+                <h1 className='titulo'>Nivel 1</h1>
+                <img className="arrow" src="https://i.ibb.co/8Nw5d9j/Flecha2.png" alt="Flecha" />
+            </div>
             <h2 className='titulo'>Bienvenida al Nivel 1 de tu aprendizaje.</h2>
             <p className='questions'>Revisa el contenido que hemos preparado para tí, y luego responde las preguntas para poder ir avanzando de nivel.
             Recuerda que estar bien informada es lo que te ayudará a defenderte de situaciones de violencia obstetrica.
@@ -79,14 +93,19 @@ Edúcate y empodérate. ¡Tu puedes!</p>
                     </main>))
             }
             <div className='containerCheck'>
+                <label className='nivel'>¿Estás segura de haber adquirido los conocimientos necesarios?</label>
+                <br/>
+                <div>
+                <label className='nivel'>Selecciona aquí</label>
                 <input type="checkbox" className="add-item__input"
                     onChange={e => setCheck(e.target.value)} value="check"
                 />
-                <label className='nivel'>Nivel completado</label>
+                </div>
+                
             </div>
-
-            <button className="levelButton">Enviar Respuestas</button>
-
+            <Link to="/home">
+            <button className="levelButton2" onClick={() => pruebaCheck()}>Enviar Respuestas</button>
+            </Link>
         </div>
 
 

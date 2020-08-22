@@ -12,9 +12,13 @@ const PanicButton = () => {
             <div className='red-containerDos'>
                 <h2 className='subtitulo1'>Botón de asistencia</h2>
                 <p className='parrafoDos'>Este botón te contactará con tu Asistente de la Fundación OVO. Te acompañará y ayudará en este momento de angustia. </p>
-                <button className="button-sosDos">S.O.S</button>
+                <a href="tel:+56991369326">
+                    <button className="button-sosDos">
+                        S.O.S
+                    </button>
+                </a>
                 <h2 className='subtitulo'>Recuerda utilizar este botón sólo en caso de urgencia</h2>
-                <a className="linkPanicButton" href="">Ver más información...</a>
+                <a className="linkPanicButton" href="https://ovochile.cl/">Ver más información...</a>
             </div>
         </div >
     );
