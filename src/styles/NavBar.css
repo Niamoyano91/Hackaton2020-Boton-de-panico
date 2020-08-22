@@ -1,0 +1,17 @@
+.containerNavBar{
+bottom: 0;
+    display: flex;
+    position: fixed;
+    background: #742092;
+    width: 100%;
+    height: 70px;
+    justify-content: space-around;
+}
+.btnNavBar{
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+.imgNavBar{
+    height: 48px;
+}

@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .red-container{
     background: #FF9B8B;
@@ -64,7 +63,7 @@
     border-radius: 20px;
     width: 320px;
     height: 500px;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
 }
 .arrow{
     height: 15px;
