@@ -14,6 +14,8 @@
 }
 .nivel{
     color: #742092;
+    text-align: center;
+    padding-top: 10px;
 }
 
 input[type="checkbox" i] {
@@ -73,7 +75,7 @@ input[type='checkbox']:after {
     width: 16px;
     height: 16px;
     top: -2px;
-    left: -5px;
+    left: 1px;
     position: relative;
     background-color: #D1D3D1;
     content: '';
@@ -85,7 +87,7 @@ input[type='checkbox']:checked:after {
     width: 11px;
     height: 11px;
     top: -2px;
-    left: -5px;
+    left: 1px;
     position: relative;
     background-color: white;
     content: '';
@@ -93,4 +95,23 @@ input[type='checkbox']:checked:after {
     visibility: visible;
     border: 4px solid #AE6AC7;
 
+}
+.levelButton2{
+    background: #742092;
+    color: white;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    border: none;
+    margin: 16% 0% 0% -43%;
+    width: 186%;
+}
+.containerCheck{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+align-content: center;
+align-items: center;
 }

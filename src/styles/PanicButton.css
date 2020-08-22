@@ -41,7 +41,8 @@ display: flex;
 }
 .button-sosDos{
     background: #E34C4C;
-    border: none;
+    border: 0;
+    outline: none;
     height: 44%;
     border-radius: 78%;
     width: 64%;
