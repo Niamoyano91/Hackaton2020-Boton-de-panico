@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import '../styles/Learning.css'
+import Barra from '../assets/barra2.png'
 
 const Learning = () => {
 
@@ -13,7 +14,7 @@ const Learning = () => {
             </div>
             <main >
                 <section >
-                    <p>Avance pendiente</p>
+                    <img src={Barra} alt='barra' className='barra' />
                     <h1 className='tituloPrincipal'>¡Edúcate y empopderate!</h1>
                 </section>
                 <section className="level-lila">

@@ -32,8 +32,8 @@ const Home = () => {
                     <p className='parrafo'>¿Necesitas ayuda urgente?</p>
                     <p className='parrafo2'>Pide ayuda directa</p>
                     <div className="containerImgbutton">
-                        <img className="imgbutton" src="https://i.ibb.co/5K5Fzhg/Group-1234.png" alt="button" />
-                        <a href="">Ver más información...</a>
+                        <img className="imgbutton" src="https://i.ibb.co/9Z570TC/Group-124.png" alt="button" />
+                        <a href="https://ovochile.cl/">Informate como habilitarlo aqui...</a>
                         {
                             panicButton()
                         }
@@ -66,7 +66,7 @@ const Home = () => {
                             <img className="imgIconos" src="https://i.ibb.co/D4yH2w8/Group-128.png" alt="contenidos" />
                         </button>
                         <button className="iconos">
-                            <img className="imgIconos" src="https://i.ibb.co/g7RcGG8/Group-129.png" alt="relajaciónybienestar" />
+                            <img className="imgIconos" src="https://i.ibb.co/Y7qQC2w/Group-135.png" alt="relajaciónybienestar" />
                         </button>
 
                     </div>
