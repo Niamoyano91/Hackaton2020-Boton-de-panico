@@ -3,6 +3,8 @@ import '../styles/SignIn.css'
 import { auth, db } from '../firebase'
 import { withRouter } from 'react-router-dom'
 import firebase from 'firebase'
+import Facebook from '../assets/facebook.png'
+import Google from '../assets/google.png'
 
 const SignIn = (props) => {
 
@@ -103,27 +105,27 @@ const SignIn = (props) => {
                 <div className="containerDataSignIn">
                     <input type="text" className="nameInput" onChange={(e) => setName(e.target.value)} value={name} placeholder="Nombre Apellido"></input>
                     <input type="text" className="phoneInput" onChange={(e) => setPhone(e.target.value)} value={phone} placeholder="Teléfono móvil"></input>
-                    <input type="text" className="emailInput" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
-                    <input type="password" className="passwordInput" onChange={(e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
+                    <input type="text" className="emailInputDos" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="Correo electrónico"></input>
+                    <input type="password" className="passwordInputDos" onChange={(e) => setPass(e.target.value)} value={pass} placeholder="Contraseña"></input>
                     {error && (<div className="error">{error}</div>)}
                 </div>
-
+                <div className="containerRegisterSignIn">
+                    <button type="submit" className="createSignIn"> Registrar</button>
+                </div>
                 <div className="containertextSignIn">
                     <p>También puedes registrarte con:</p>
                 </div>
 
                 <div className="containerBtnSocialSignIn">
                     <button type="submit" className="google" onClick={() => loginWithGoogle()}>
-                        <img src="" className="google" alt="google" />
+                        <img src={Google} className="logosIngresos" alt="google" />Ingresar con Google
                     </button>
                     <button type="submit" className="facebook" onClick={() => loginWithFacebook()}>
-                        <img src="" className="facebook" alt="facebook" />
+                        <img src={Facebook} className="logosIngresos" alt="facebook" />Ingresar con Facebook
                     </button>
                 </div>
 
-                <div className="containerRegisterSignIn">
-                    <button type="submit" className="createSignIn">Crear Cuenta</button>
-                </div>
+
 
             </form>
         </div>
