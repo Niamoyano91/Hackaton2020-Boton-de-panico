@@ -18,6 +18,8 @@ import Welcome from './components/Welcome'
 import Learning from './components/Learning'
 import Levels from './components/Levels'
 
+import {UserProvider} from './Context/UserContext'
+
 const App = () => {
 
   const [firebaseUser, setFirebaseUser] = React.useState(false)
@@ -56,9 +58,12 @@ const App = () => {
         <Route path="/signin" component={SignIn} />
         <Route path="/home" component={Home} />
         <Route path="/learning" component={Learning} />
-        <Route path="/levels">
-          <Levels />
-        </Route>
+        <UserProvider>
+          <Route path="/levels">
+            <Levels />
+          </Route>
+        </UserProvider>
+
         <Route path="/sos" component={PanicButton} />
       </Switch>
     </Router>

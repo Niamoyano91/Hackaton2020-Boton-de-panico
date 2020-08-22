@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react'
 import '../styles/Levels.css'
 import firebase from 'firebase'
+import { UserContext } from '../Context/UserContext.js'
 
 const Levels = () => {
+    let { setCheck } = useContext(UserContext)
+
     var user = firebase.auth().currentUser;
     user.providerData.forEach(function (profile) {
         const name = profile.displayName;
@@ -22,7 +25,7 @@ const Levels = () => {
                 <h2>¿Qué es la violencia obstétrica?</h2>
                 <div>
                     <section className="multimedia">VIDEO
-<p className="infoMultimedia">¿Quieres saber más?</p>
+                        <p className="infoMultimedia">¿Quieres saber más?</p>
                     </section>
                     <section className="questions">
                         <h3>Preguntas</h3>
@@ -31,6 +34,9 @@ const Levels = () => {
                         <label for="">blablabla</label><br></br><br></br>
 
                         <button>Enviar Respuestas</button>
+                        <input type="checkbox" className="add-item__input"
+                            onChange = {e => setCheck(e.target.value)} value="check" 
+                        />
                     </section>
                 </div>
             </main>
