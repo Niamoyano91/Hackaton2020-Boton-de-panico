@@ -1,7 +1,18 @@
 import React from 'react';
 import '../styles/Levels.css'
+import firebase from 'firebase'
 
 const Levels = () => {
+    var user = firebase.auth().currentUser;
+    user.providerData.forEach(function (profile) {
+        const name = profile.displayName;
+        const email = profile.email;
+        const db = firebase.firestore()
+        db.collection('usuarios').add({
+            nameUser: name,
+            emailUser: email
+        })
+    });
 
     return (
         <div className="containerLevels">
