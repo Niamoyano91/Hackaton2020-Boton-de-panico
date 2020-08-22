@@ -5,17 +5,22 @@ import '../styles/Learning.css'
 const Learning = () => {
 
     return (
-        <div className="containerLevels">
-            <h1>Mi Aprendizaje</h1>
-            <main className="">
-                <section>
+        <div className="containerLearning">
+            <div className="containerArrowTittle">
+                <img className="arrow" src="https://i.ibb.co/Z1jNqRn/Flecha1.png" alt="Flecha" />
+                <h1 className='titulo'>Mi Aprendizaje</h1>
+                <img className="arrow" src="https://i.ibb.co/8Nw5d9j/Flecha2.png" alt="Flecha" />
+            </div>
+            <main >
+                <section >
                     <p>Avance pendiente</p>
+                    <h1 className='tituloPrincipal'>¡Edúcate y empopderate!</h1>
                 </section>
-                <section>
-                    <h2>Nivel 1</h2>
-                    <p>¿Qué es la violencia obstétrica?</p>
+                <section className="level-lila">
+                    <h2 className='titulo2'>Nivel 1</h2>
+                    <p className='titulo3'>¿Qué es la violencia obstétrica?</p>
                     <Link to="/levels">
-                        <button>Entrar</button>
+                        <button className="levelButton">Entrar a Nivel 1</button>
                     </Link>
                 </section>
             </main>

@@ -1,0 +1,29 @@
+.levelButton{
+    background: #742092;
+    color: white;
+    height: 8vh;
+    width: 71%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 29px;
+    border: none;
+    margin: 13% 0% 0% 13%;
+}
+.containerLearning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.level-lila{
+    background: #F5E2FC;
+    width: 320px;
+    height: 209px;
+    border-radius: 20px;
+}
+.titulo3{
+    color: #742092;
+    padding: 10px 0px 0px 15px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
