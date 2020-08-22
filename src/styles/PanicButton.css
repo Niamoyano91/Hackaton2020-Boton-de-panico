@@ -1,20 +1,43 @@
-.subtitulo{
+.homeContainer{
+display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.subtitulo1{
     color:#E34C4C;
     font-family: 'Montserrat';
     margin: 3%;
+}
+.subtitulo, .linkPanicButton{
+    display: flex;
+    justify-content: center;
+    color:#E34C4C;
+    font-family: 'Montserrat';
+    margin: 3%;
+    font-size: 19px;
+    text-align: center;
+}
+.tituloPanicButton{
+    color: #742092;
+    font-family: 'Montserrat';
+    text-align: center;
 }
 .parrafoDos{
     color: #E34C4C;
     text-align: left;
     margin: 4%;
+    font-size: 15px;
     font-family: 'Montserrat';
 }
 .red-containerDos{
     background: #FFF4D4;
     border-radius: 20px;
-    width: 340px;
+    width: 330px;
     height: 480px;
     text-align: left;
+    margin-bottom: 90px;
 }
 .button-sosDos{
     background: #E34C4C;
@@ -27,4 +50,9 @@
     font-family: 'Montserrat';
     font-weight: bold;
     margin-left: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.linkPanicButton{
+    font-size: 15px;
 }
