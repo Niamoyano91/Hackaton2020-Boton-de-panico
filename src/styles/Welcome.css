@@ -12,11 +12,15 @@
     color: #742092;
     font-family: 'Dancing Script', cursive;
     font-size: 96px;
+    margin: -20px 0px 0px 0px;
 }
+.subtittleWelcome{
+    margin: 0px;
+    color:#742092;
+    font-family: 'Montserrat';
+    font-size: 16px;
 
- .logoWelcome{
-    margin-top: -25%;
-} 
+}
 .loginWelcome{
     background: #742092;
     color: white;
@@ -38,7 +42,7 @@
     color:#742092;
     font-family: 'Montserrat';
     font-size: 16px;
-    margin: -4%;
+    margin: 0px 0px 0px 0px;
 }
 .tituloUno{
     color: #742092;
