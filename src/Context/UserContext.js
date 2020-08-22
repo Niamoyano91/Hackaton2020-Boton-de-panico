@@ -6,11 +6,10 @@ let { Provider, Consumer } = UserContext
 
 function UserProvider({ children }) {
 
-    const [check, setCheck] = React.useState([])
-
+    const [checkk, setCheck] = React.useState([])
 
   return (
-    <Provider value={{ check, setCheck
+    <Provider value={{ checkk, setCheck
     }}>
       {children}
     </Provider>

@@ -56,10 +56,13 @@ const App = () => {
         <Route path="/" exact component={Welcome} />
         <Route path="/login" exact component={Login} />
         <Route path="/signin" component={SignIn} />
-        <Route path="/home" component={Home} />
+        {/* <Route path="/home" component={Home} /> */}
         <Route path="/learning" component={Learning} />
         <Route path="/sos" component={PanicButton} />
         <UserProvider>
+          <Route path="/home">
+            <Home />
+          </Route>
           <Route path="/levels">
             <Levels />
           </Route>

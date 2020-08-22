@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import '../styles/Levels.css'
 import firebase from 'firebase'
 import { UserContext } from '../Context/UserContext.js'
+import { Link } from 'react-router-dom'
 
 const Levels = () => {
     let { setCheck } = useContext(UserContext)
@@ -32,11 +33,12 @@ const Levels = () => {
                         <h4>1.La violencia obstetrica es:</h4>
                         <input type="radio" id="" name="" value="" />
                         <label for="">blablabla</label><br></br><br></br>
-
-                        <button>Enviar Respuestas</button>
                         <input type="checkbox" className="add-item__input"
                             onChange = {e => setCheck(e.target.value)} value="check" 
                         />
+                        <Link to="/home">
+                        <button>Enviar Respuestas</button>
+                        </Link>
                     </section>
                 </div>
             </main>
