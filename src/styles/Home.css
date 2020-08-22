@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .red-container{
     background: #FF9B8B;
@@ -11,23 +12,76 @@
 }
 .titulo{
     color: #742092;
-    text-align: center;
+    padding: 10px 0px 0px 15px;
     font-family: 'Montserrat';
+    
+}
+.titulo2{
+    color: #742092;
+    padding: 10px 0px 0px 15px;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    width: 190px;
 }
 .parrafo{
     color: #FBFBFB;
     text-align: center;
+    font-size: 25px;
+    padding: 11px 0px 0px 0px;
+    margin: 0px;
+}
+.parrafo2{
+    color: #FBFBFB;
+    text-align: center;
+    font-size: 17px;
+    margin: 0px 0px 0px 0px;
 }
 .button-sos{
-    background: #E34C4C;
-    border: none;
-    height: 56%;
-    border-radius: 78%;
-    width: 44%;
-    color: #FBFBFB;
-    font-size: 30px;
-    margin-left: 20%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    position: absolute;
+    padding-bottom: 18px;
+}
+.containerImgbutton{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+.containerArrowTittle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.purple-container{
+    background: #E4CDEC;
+    border-radius: 20px;
+    width: 320px;
+    height: 500px;
+    margin-bottom: 30px;
+}
+.arrow{
+    height: 15px;
+}
+.imgbutton{
+    width: 110px;
+}
+.containerbuttons{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
 }
 .iconos{
-    color: #742092;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+.imgIconos{
+    height: 120px;
 }
