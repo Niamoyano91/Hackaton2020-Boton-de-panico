@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/Welcome.css'
 import { Link } from "react-router-dom";
-import Grupo from '../assets/group.png'
+import Grupo from '../assets/Group.png'
 
 const Welcome = () => {
 
