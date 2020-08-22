@@ -11,32 +11,32 @@ const SignIn = (props) => {
     const [email, setEmail] = React.useState('')
     const [pass, setPass] = React.useState('')
     const [error, setError] = React.useState(null)
-    
+
     const processData = e => {
         e.preventDefault()
-        if(!name.trim()){
+        if (!name.trim()) {
             setError('* Ingresa Nombre y apellido')
             return
         }
-        if(!email.trim()){
+        if (!email.trim()) {
             setError('* Ingrese email')
             return
         }
-        if(!pass.trim()){
+        if (!pass.trim()) {
             setError('* Ingrese contraseña')
             return
         }
-        if(pass.length < 6){
+        if (pass.length < 6) {
             setError('* Debe ser mayor a 6 carácteres')
             return
         }
-    
+
         console.log('Pasando todas las validaciones')
         setError(null)
         register()
     }
 
-    const register = React.useCallback(async() => {
+    const register = React.useCallback(async () => {
         try {
             const res = await auth.createUserWithEmailAndPassword(email, pass)
             await res.user.updateProfile({
@@ -51,12 +51,12 @@ const SignIn = (props) => {
             setPass('')
             setError(null)
             props.history.push('/home')
-        }catch (error) {
+        } catch (error) {
             console.log(error)
-            if(error.code === 'auth/invalid-email'){
+            if (error.code === 'auth/invalid-email') {
                 setError('* El email ingresado no es válido')
             }
-            if (error.code === 'auth/email-already-in-use'){
+            if (error.code === 'auth/email-already-in-use') {
                 setError('* El email ya ha sido utilizado')
             }
         }
@@ -67,31 +67,31 @@ const SignIn = (props) => {
         firebase.auth().signInWithPopup(provider).then((result) => {
             const user = result.user;
             console.log('user', user);
-        }).catch(function(error) {
+        }).catch(function (error) {
         });
     }
     const loginWithFacebook = () => {
         const provider = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(provider).then((result) => {
-        }).catch(function(error) {
+        }).catch(function (error) {
         });
     }
 
-    // const observer = () => {
-    //     auth.onAuthStateChanged((user) => {
-    //     if (user) {
-    //         console.log('existe usuario activo');
-    //         props.history.push('/home')
-    //         console.log('*******************');
-    //         console.log(user.emailVerified);
-    //         console.log('*******************');
-    //     } else {
-    //     //    User is signed out.
-    //         console.log('no existe usuario activo');
-    //     }
-    //     });
-    // }
-    // observer()
+    const observer = () => {
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                console.log('existe usuario activo');
+                props.history.push('/home')
+                console.log('*******************');
+                console.log(user.emailVerified);
+                console.log('*******************');
+            } else {
+                //    User is signed out.
+                console.log('no existe usuario activo');
+            }
+        });
+    }
+    observer()
 
     return (
         <div className="containerSignIn">
@@ -99,13 +99,13 @@ const SignIn = (props) => {
                 <div className="containerTittleSignIn">
                     <h2 className="SignIn">Regístrate</h2>
                 </div>
-                
+
                 <div className="containerDataSignIn">
-                    <input type="text" className="nameInput" onChange = { (e) => setName(e.target.value)} value={name} placeholder="Nombre Apellido"></input>
-                    <input type="text" className="phoneInput" onChange = { (e) => setPhone(e.target.value)} value={phone} placeholder="Teléfono móvil"></input>
-                    <input type="text" className="emailInput" onChange = { (e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
-                    <input type="password" className="passwordInput" onChange = { (e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
-                    { error && (<div className="error">{error}</div>)}
+                    <input type="text" className="nameInput" onChange={(e) => setName(e.target.value)} value={name} placeholder="Nombre Apellido"></input>
+                    <input type="text" className="phoneInput" onChange={(e) => setPhone(e.target.value)} value={phone} placeholder="Teléfono móvil"></input>
+                    <input type="text" className="emailInput" onChange={(e) => setEmail(e.target.value)} value={email} placeholder="jane@example.com"></input>
+                    <input type="password" className="passwordInput" onChange={(e) => setPass(e.target.value)} value={pass} placeholder="******"></input>
+                    {error && (<div className="error">{error}</div>)}
                 </div>
 
                 <div className="containertextSignIn">
@@ -113,21 +113,21 @@ const SignIn = (props) => {
                 </div>
 
                 <div className="containerBtnSocialSignIn">
-                    <button type="submit" className="google" onClick={ () => loginWithGoogle()}>
+                    <button type="submit" className="google" onClick={() => loginWithGoogle()}>
                         <img src="" className="google" alt="google" />
                     </button>
-                    <button type="submit" className="facebook" onClick={ () => loginWithFacebook()}>
+                    <button type="submit" className="facebook" onClick={() => loginWithFacebook()}>
                         <img src="" className="facebook" alt="facebook" />
                     </button>
                 </div>
-                
+
                 <div className="containerRegisterSignIn">
                     <button type="submit" className="createSignIn">Crear Cuenta</button>
                 </div>
-                
+
             </form>
         </div>
-        
+
     )
 }
 
