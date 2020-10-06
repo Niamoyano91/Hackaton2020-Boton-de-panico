@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Hackeando la desigualdad 2020.
 
-In the project directory, you can run:
+![Hackeando la desigualdad](https://i.ibb.co/9pWPBS4/hqdefault.jpg)
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Desafio
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+La  planteado fue cerrar la brecha de genero en una de las tres áreas presentadas que fueron el sector financiero, salud o telecomunicaciones. Nuestro squat Womind desarrollo una solución para una problemática común y normalizada en países de Latinoamerica, como lo es la Violencia Obstétrica.
 
-### `npm test`
+### Contexto
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+¿Qué es la Violencia Obstétrica? Es una forma específica de violencia contra las mujeres que constituye una violación a los derechos humanos. Se genera en el ámbito de la atención del embarazo, parto y post-parto en los servicios de salud públicos y privados, y consiste en cualquier acción u omisión por parte del personal del Sistema Nacional de Salud que cause un daño físico y/o psicológico a la mujer durante el embarazo, parto y puerperio, que se exprese en la falta de acceso a servicios de salud reproductiva, un trato cruel, inhumano o degradante, o un abuso de medicalización, menoscabando la capacidad de decidir de manera libre e informada sobre dichos procesos reproductivos.
 
-### `npm run build`
+Esta Violencia puede representarse de las siguientes formas: burlas, regaños, insultos, amenazas, ironías, manipulación de información, humillaciones, negación a ciertos tratamientos, limitación de la información de las decisiones que el equipo médico va tomando avanzado el trabajo de parto, abuso de medicinas e, incluso, golpes.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Testimonios
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Una imagen vale mas que mil palabras, recopilamos algunas denuncias y testimonios, que identifican lamentablemente a más de una mujer: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Frases de casos reales](https://i.ibb.co/WkNM5c9/Contexto.png)
 
-### `npm run eject`
+### Objetivo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Eliminar de raíz la violencia obstétrica en Latinoamérica por medio de la educación, de esta forma entregamos información oportuna a cada una de las mujeres abarcando todas las edades e igualando la las condiciones para TODAS, una mujer y/o niña informada es una persona empoderada que puede hacer valer sus derechos y el de otros, sin embargo no solo nos enfocamos en informar ademas queremos crear comunidad, una red de apoyo entre mujeres. La sororidad debe ser un pilar en la sociedad para lograr igualdad de condiciones entre géneros.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Solución
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Creamos una aplicación web móvil que educa a mujeres y niñas entregando información sobre sus cuerpos, como cambian a través de la gestación, síntomas, practicas en el parto y lo fundamental cuando estas practicas del personal medico equivalen a violencia obstétrica. Diseñamos niveles, lo central es que la mujer sortee una serie de etapas para obtener la información necesaria y de esta forma desbloquear nuestro “BOTON DE PANICO” el concepto es conocido, sin embargo, nuestro giro fue el siguiente. El botón estará disponible “Activado” una vez que nuestra usuaria este cursando el penúltimo nivel en nuestra app, de esta forma si ella considera que sus derechos están siendo vulnerados presiona el botón y esta inmediatamente la contactara con otra persona de la comunidad para darle asistencia. Deseamos que se genere comunidad y esta persona pueda dar asesoría de que pasos puede seguir es por esto que nuestra app necesita trabajar con fundaciones de cada país que se dediquen a combatir este tipo de abuso.
 
-## Learn More
+### Estilos
+![Guia de estilos](https://i.ibb.co/yN2NBfQ/Gui-a-de-estilo.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prototipo
+![Figma](https://i.ibb.co/R3FRQ06/Desktop-1.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### Aplicación Web Móvil
+![Teléfono Celular](https://i.ibb.co/9hBgf08/Mac-Book-1.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Para interactuar con SIS ingresa [aquí](https://github.com/valeriaconstanzabc/SCL013-burger-queen)

@@ -1,13 +1,13 @@
-[debug] [2020-08-21T17:59:55.324Z] ----------------------------------------------------------------------
-[debug] [2020-08-21T17:59:55.329Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\valer\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2020-08-21T17:59:55.330Z] CLI Version:   8.9.0
-[debug] [2020-08-21T17:59:55.330Z] Platform:      win32
-[debug] [2020-08-21T17:59:55.330Z] Node Version:  v12.16.2
-[debug] [2020-08-21T17:59:55.333Z] Time:          Fri Aug 21 2020 13:59:55 GMT-0400 (GMT-04:00)
-[debug] [2020-08-21T17:59:55.334Z] ----------------------------------------------------------------------
-[debug] [2020-08-21T17:59:55.334Z] 
-[debug] [2020-08-21T17:59:55.348Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-08-21T17:59:55.349Z] > authorizing via signed-in user
+[debug] [2020-08-22T18:39:50.061Z] ----------------------------------------------------------------------
+[debug] [2020-08-22T18:39:50.064Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-08-22T18:39:50.064Z] CLI Version:   8.9.0
+[debug] [2020-08-22T18:39:50.064Z] Platform:      darwin
+[debug] [2020-08-22T18:39:50.064Z] Node Version:  v12.16.1
+[debug] [2020-08-22T18:39:50.065Z] Time:          Sat Aug 22 2020 14:39:50 GMT-0400 (GMT-04:00)
+[debug] [2020-08-22T18:39:50.065Z] ----------------------------------------------------------------------
+[debug] [2020-08-22T18:39:50.066Z] 
+[debug] [2020-08-22T18:39:50.079Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-22T18:39:50.080Z] > authorizing via signed-in user
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -17,5 +17,33 @@
 
 You're about to initialize a Firebase project in this directory:
 
-  C:\Users\valer\Desktop\Laboratoria\Hackaton2020-Boton-de-panico
+  /Users/estefaniamoyano/Desktop/LABORATORIA/Hackaton2020-Boton-de-panico
 
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-08-22T18:40:04.421Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-08-22T18:40:04.422Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-08-22T18:40:04.594Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 22 Aug 2020 18:40:04 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-22T18:40:04.617Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-08-22T18:40:05.884Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 22 Aug 2020 18:40:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-22T21:54:14.974Z] Error: write EIO
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at WriteStream.Socket._writeGeneric (net.js:780:11)
+    at WriteStream.Socket._write (net.js:792:8)
+    at doWrite (_stream_writable.js:441:12)
+    at writeOrBuffer (_stream_writable.js:425:5)
+    at WriteStream.Writable.write (_stream_writable.js:316:11)
+    at EventEmitter.signalExit.alwaysLast (/usr/local/lib/node_modules/firebase-tools/node_modules/restore-cursor/index.js:7:18)
+    at EventEmitter.emit (events.js:311:20)
+    at EventEmitter.emit (domain.js:482:12)
+    at emit (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:78:11)
+    at process.listener (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:94:7)
+    at process.emit (events.js:311:20)
