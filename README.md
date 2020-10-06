@@ -29,9 +29,6 @@ Eliminar de raíz la violencia obstétrica en Latinoamérica por medio de la edu
 
 Creamos una aplicación web móvil que educa a mujeres y niñas entregando información sobre sus cuerpos, como cambian a través de la gestación, síntomas, practicas en el parto y lo fundamental cuando estas practicas del personal medico equivalen a violencia obstétrica. Diseñamos niveles, lo central es que la mujer sortee una serie de etapas para obtener la información necesaria y de esta forma desbloquear nuestro “BOTON DE PANICO” el concepto es conocido, sin embargo, nuestro giro fue el siguiente. El botón estará disponible “Activado” una vez que nuestra usuaria este cursando el penúltimo nivel en nuestra app, de esta forma si ella considera que sus derechos están siendo vulnerados presiona el botón y esta inmediatamente la contactara con otra persona de la comunidad para darle asistencia. Deseamos que se genere comunidad y esta persona pueda dar asesoría de que pasos puede seguir es por esto que nuestra app necesita trabajar con fundaciones de cada país que se dediquen a combatir este tipo de abuso.
 
-### Estilos
-![Guia de estilos](https://i.ibb.co/yN2NBfQ/Gui-a-de-estilo.png)
-
 ### Prototipo
 ![Figma](https://i.ibb.co/R3FRQ06/Desktop-1.png)
 
@@ -39,4 +36,4 @@ Creamos una aplicación web móvil que educa a mujeres y niñas entregando infor
 ### Aplicación Web Móvil
 ![Teléfono Celular](https://i.ibb.co/9hBgf08/Mac-Book-1.png)
 
-Para interactuar con SIS ingresa [aquí](https://github.com/valeriaconstanzabc/SCL013-burger-queen)
+Para interactuar con SIS ingresa [aquí](https://hackathon2020-6329e.firebaseapp.com)
